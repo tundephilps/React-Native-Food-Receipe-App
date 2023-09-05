@@ -1,0 +1,54 @@
+   <View style={styles.info}>
+                <Text style={styles.infoTitle}>{item.strMeal}</Text>
+
+                <View style={styles.infoRating}>
+                  <Text style={styles.infoRatingLabel}>5.0</Text>
+
+                  <Feather color="#4c6cfd" name="star" size={15} />
+
+                  <Text style={styles.infoRatingText}>{meal?.strArea}</Text>
+                </View>
+
+                <Text style={styles.infoDescription}>
+                  {item.strInstructions}
+                </Text>
+              </View>
+
+              <TouchableOpacity style={{ marginTop: 8 }}>
+                <Stats setMeal={setMeal} meal={meal} />
+              </TouchableOpacity>
+              <View style={{ paddingBottom: 4 }}>
+                <Text
+                  style={{ fontSize: 15, fontWeight: "500", color: "gray" }}
+                >
+                  Ingredients
+                </Text>
+                <View style={{ marginLeft: 8 }}>
+                  {/* {ingredientsIndexes(meal).map((i) => {
+                    return (
+                      <View
+                        key={i}
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          rowGap: 4,
+                        }}
+                      >
+                        <View
+                          style={{
+                            height: 12,
+                            width: 15,
+                            backgroundColor: "orange",
+                            borderRadius: 50,
+                          }}
+                        >
+                          <View style={{ flexDirection: "row" }}>
+                            <Text>{meal["strMeasure" + i]}</Text>
+                            <Text>{meal["strIngredient" + i]}</Text>
+                          </View>
+                        </View>
+                      </View>
+                    );
+                  })} */}
+                </View>
+              </View>
